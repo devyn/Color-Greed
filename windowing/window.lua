@@ -75,13 +75,15 @@ function Window:_draw()
    love.graphics.setLineWidth(2)
    love.graphics.setLineStyle('smooth')
 
-   love.graphics.setColor(unpack(self.color))
-   love.graphics.rectangle("line", self.headerPosition[1], self.headerPosition[2], self.headerSize[1], self.headerSize[2])
    love.graphics.setColor(0,0,0,255)
    love.graphics.rectangle("fill", self.headerPosition[1], self.headerPosition[2], self.headerSize[1], self.headerSize[2])
+
    love.graphics.setColor(unpack(self.color))
-   love.graphics.rectangle("line", self.position[1], self.position[2], self.size[1], self.size[2])
+   love.graphics.rectangle("line", self.headerPosition[1], self.headerPosition[2], self.headerSize[1], self.headerSize[2])
+
    love.graphics.rectangle("fill", self.position[1], self.position[2], self.size[1], self.size[2])
+   love.graphics.rectangle("line", self.position[1], self.position[2], self.size[1], self.size[2])
+
 
    love.graphics.setColor(255,255,255,255)
    love.graphics.print(self.caption, self.headerPosition[1]+8, self.headerPosition[2]+15)
