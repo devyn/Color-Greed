@@ -86,7 +86,7 @@ function Window:_draw()
 
 
    love.graphics.setColor(255,255,255,255)
-   love.graphics.print(self.caption, self.headerPosition[1]+8, self.headerPosition[2]+15)
+   love.graphics.printf(self.caption, self.headerPosition[1]+8, self.headerPosition[2]+15, self.size[2]-30, "left")
 
    self:content_draw()
    
